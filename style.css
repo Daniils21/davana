@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.santa{
+    width: 300px;
+    animation-name: movingsanta;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: linear;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes movingsanta {
+    0%{
+        left: 100%;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate(10deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(-10deg);
+    }
+
+    100%{
+        left:-300px;
+    }
+
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
